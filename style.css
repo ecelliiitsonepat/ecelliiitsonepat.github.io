@@ -81,13 +81,14 @@ overflow-x: hidden;
   width:100%;
   margin-top: 1vh;
   padding:calc(2px + 1vw);
-  padding-right:calc(5px + 3vw);
+  padding-right:calc(5px + 1vw);
   font: bolder calc(5px + 2vw);
   display:relative;
   text-align:right;
   background: rgb(0,0,0);
   width:99%;
   box-sizing: border-box;
+  transform: translateX(1vw);
 background: linear-gradient(90deg, rgba(0,0,0,1) 29%, rgba(250,203,30,0.6842087176667542) 49%);
 }
 .nav *{
@@ -102,6 +103,9 @@ background: linear-gradient(90deg, rgba(0,0,0,1) 29%, rgba(250,203,30,0.68420871
   margin-right:5px;
   border-radius:10px;
   letter-spacing: 1.2px;
+}
+.ourteam{
+  margin-right:0;
 }
 .nav *:hover{
 background:rgb(255, 255, 255);
