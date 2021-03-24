@@ -5,31 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Cell | IIIT Sonepat</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Josefin+Sans&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
-<style>body{background: #020C19;
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+<style>*{box-sizing: border-box;
+}
+body{
+  margin:0;
     transition: 1s ease-out;
     transition-delay: 570ms;
-    font-family: 'Josefin Sans''Architects Daughter', cursive;
-width:101vw;
-overflow-x:hidden;
+    font-family: 'Poiret One', 'Josefin Sans''Architects Daughter', cursive;
 color:white;
+width:100vw;
+overflow-x: hidden;
+height:200vh;
+background-color: #E9ECEF;
+
 }
 /*-----------------BELOW IS PRELOADER-----------------*/
 
 .preloader{
   z-index: 9999;
     position: fixed;
+    top:0;
+    left:0;
     width:100vw;
     height: 100vh;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform:scale(1.1);
 background: radial-gradient(circle, #020C19 100%,#040C1A 80%, #160B1E 60%, #2C0E29 40%,#400F2F 40%,#511036 48%,#3E0F2F 56%,#290E26 56%,#100C1D 8.32%,#020C17 8.32%);
          /*to be removed*/
 }
@@ -59,7 +71,7 @@ background: linear-gradient(90deg, rgba(22,11,30,1) 14%, rgba(81,16,54,1) 21%, r
 transform: translateY(2vh);
 font-size: calc(10px + 2vh + 2vw);}
   @keyframes shine {
-    to {
+    from {
       background-position: 200% center;
     }
   }
@@ -73,23 +85,31 @@ font-size: calc(10px + 2vh + 2vw);}
 
   /*-----------------ABOVE WAS PRELOADER-------------------*/
 
-  /*-----------------Below Homepage Heading-----------------------*/
-
+  /*----------------------Header Below-----------------------*/
+.homepage{
+  display:grid;
+grid-template-columns: repeat(20,5vw);
+grid-template-rows: repeat(18,4vh);
+width:100%;
+overflow-x: hidden;
+}
 .nav{
   z-index: 1;
   position:sticky;
   top:0;
-  width:100vw;
+  width:100%;
   margin-top: 1vh;
   padding:calc(2px + 1vw);
-  padding-right:calc(5px + 3vw);
+  padding-right:calc(5px + 1vw);
   font: bolder calc(5px + 2vw);
   display:relative;
   text-align:right;
   background: rgb(0,0,0);
   width:99%;
   box-sizing: border-box;
+  transform: translateX(1vw);
 background: linear-gradient(90deg, rgba(0,0,0,1) 29%, rgba(250,203,30,0.6842087176667542) 49%);
+position:absolute;
 }
 .nav *{
   text-decoration: none;
@@ -104,6 +124,9 @@ background: linear-gradient(90deg, rgba(0,0,0,1) 29%, rgba(250,203,30,0.68420871
   border-radius:10px;
   letter-spacing: 1.2px;
 }
+.ourteam{
+  margin-right:0;
+}
 .nav *:hover{
 background:rgb(255, 255, 255);
 color:#e6ba1ae0;
@@ -111,23 +134,21 @@ transition:500ms;
 }
 .header{
   float:left;
+  grid-column-start: 1;
+  grid-column-end: 25;
+  grid-row-start:1;
+  grid-row-end:25;
+  width:100%;
   position: relative;
-  width:99vw;
-  height:75vh;
-  width:103%;
-  left:-2vh;
-  top:-2vh;
-  transform: scale(1);
-  box-shadow:8px 8px rgba(0, 0, 0, 0.24);
+  box-shadow:8px rgba(0, 0, 0, 0.24);
   background: black;
+  overflow:hidden;
 }
 
 .headervdocontainer{
-  z-index:-1;
+  z-index:0;
   background:black;
   transform: scale(1);
-  float:left;
-  position:absolute;
   top:0;
   left:0;
   width:103vw;
@@ -137,13 +158,14 @@ transition:500ms;
 .headervdo{
   transform:scale(1.5);
   opacity:0;
+
 }
 .headervdo_afterpreload{
   transition: ease-in 5s;
   opacity:100;
 }
 .logo{
-  z-index: 1;
+  z-index: 2;
   padding:25px;
   margin-left:calc(2vh + 5px);
   background:url("logo.jpeg");
@@ -182,13 +204,13 @@ background: radial-gradient(circle, rgba(213,213,213,1) 16%, rgba(255,201,0,1) 3
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   
-  animation:shine 4s linear infinite;
+  animation:shine 3s linear infinite;
 }
 .tagline{
   box-sizing: border-box;
   font-size: calc(1vh + 5px + 2vw);
   transform: scale(0.8);
-  font-family: 'Slabo 27px', serif;
+  font-family: 'Poiret One','Slabo 27px', serif;
   position: absolute;
   top:60%;
   right:17vw;
@@ -198,20 +220,230 @@ background: radial-gradient(circle, rgba(213,213,213,1) 16%, rgba(255,201,0,1) 3
   letter-spacing: 1vh;
   color:rgb(255, 255, 255);
   opacity:100;
+}
+/*----------------------Header Up---------------------*/
+.social{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.social *{
+flex:1;
+padding:15px;
+cursor:pointer;
+text-decoration: none;
+}
+.instagram{
+  background:url("https://sm.ign.com/ign_in/screenshot/default/ig-glyph001-74am_dp6a.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter:saturate(0);
+  transition: all ease-in 250ms;
+}
+.instagram:hover{
+  filter: saturate(1);
+  transform: scale(1.05);
+  z-index: 2;
+}
+.facebook{
+  background:url("fblogo.png") no-repeat;
+  background-position: center;
+  background-size:125%;
+  transition:ease-in-out all 250ms ;
+  filter:saturate(0);
+}
+.facebook:hover{
+  filter: saturate(1);
+  transform: scale(1.05);
+  z-index: 2;
+  filter:contrast(0.8);
+}
+.linkedin{
+background:url("linkedin.png") no-repeat;
+background-position: center;
+background-size:110%;
+transition:ease-in-out all 250ms ;
+filter:saturate(0);
+}
+.linkedin:hover{
+filter: saturate(1);
+transform: scale(1.05);
+  z-index: 2;
+}
+.youtube{
+  background:url("https://c4.wallpaperflare.com/wallpaper/377/439/784/red-white-logo-youtube-wallpaper-preview.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter:saturate(0);
+  transition: all 250ms ease-in;
+}
+.youtube:hover{
+  filter:saturate(1);
+  transform: scale(1.05);
+  z-index: 2;
+}
+@media only screen and (max-width: 700px) {
+  .instagram , .youtube , .facebook , .linkedin{
+    filter:saturate(1);
+    background-size: 200%;
+  }
+}
 
-  /* shine
-  background: rgb(213,213,213);
-  background: radial-gradient(circle, rgba(213,213,213,1) 16%, rgba(255,201,0,1) 32%, rgba(0,0,0,1) 64%);
-   background-size: 200% auto;
-    
-    color: #160B1E;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    
-    animation:shine 4s linear infinite;  */
+/*--------------------Mid_Body Below------------------*/
 
-}</style>
+.midbody{
+  font-family: 'Poiret One', cursive;
+  margin:4vh 3vw 4vh 3vw;
+  color:black;
+  display:grid;
+  grid-template-columns: repeat(33,3vw);
+  grid-template-rows: repeat(33,6vh);
+  
+}
+.quotegenerator{
+  color:black;
+  grid-column-start: 3;
+  grid-column-end: 30;
+  grid-row-start: 2;
+  grid-row-end: 6;
+  display:grid;
+  grid-template-columns: repeat(27,3vw);
+  grid-template-rows: repeat(12,2vh);
+  transform: scale(1.04);
+  text-align: center;
+  padding-top: 1vh;
+  padding:3px;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.267);
+font-family: 'Dancing Script', cursive;
+font-size: 24px;
+text-shadow:0.2px 0.2px rgba(0, 0, 0, 0.281);
+border-radius: 13px;
+color:#CED4DA;
+font-weight: 600;
+background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+}
+
+.quote{
+  grid-column-start: 1;
+  grid-column-end: 28;
+  grid-row-start:3;
+  grid-row-end:8;
+  transition:1s ease-out all;
+}
+.writer{
+  grid-column-start: 1;
+  grid-column-end: 28;
+  grid-row-start: 8;
+  grid-row-end:10;
+  text-align: center;
+  transition:1s ease-out all;
+}
+@media only screen and (max-width: 700px) {
+  .quotegenerator{
+    font-size: 17px;
+    text-shadow:0.2px 0.2px rgba(0, 0, 0, 0.281);
+  }
+  .writer{
+    grid-row-start: 9;
+  }
+}
+.lineafterquote{
+grid-column-start: 4;
+grid-column-end: 29;
+grid-row-start: 7;
+grid-row-end: 7;
+width:100%;
+height:1px;
+background:rgb(207, 207, 207);
+}
+.compendium{
+  color:white;
+  grid-column: 1/32;
+  transform: scale(1.04);
+  grid-row: 8/15;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.315);
+  background-color: #4834d4;
+background-image: linear-gradient(315deg, #4834d4 -45%, #0c0c0c 60%);
+border-radius: 15px;
+text-shadow:0.5px 0.5px rgba(0, 0, 0, 0.281);
+/*background: linear-gradient(to bottom right, #013374 22%, #c70046 99%);*/
+
+padding:5px;
+}
+.compendium h1{
+  text-align: center;
+  margin-bottom: 3px;
+}
+.compendium h4{
+  text-align: center;
+}
+.lineaftercompendium{
+  grid-column-start: 4;
+grid-column-end: 29;
+grid-row-start: 16;
+grid-row-end: 16;
+width:100%;
+height:1px;
+background:rgb(207, 207, 207);
+}
+.motive{
+  grid-column: 1/32;
+  transform: scale(1.04);
+  grid-row: 17/25;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.315);
+  background-color: #4834d4;
+  background-image: linear-gradient(315deg, #4834d4 -40%, #0c0c0c 64%);
+  border-radius: 15px;
+text-shadow:0.5px 0.5px rgba(0, 0, 0, 0.281);
+color:white;
+}
+.motive h1{
+  text-align: center;
+  margin-bottom: 3px;
+
+}
+.lineaftermotive{
+  grid-column-start: 4;
+  grid-column-end: 26;
+  grid-row-start: 26;
+  grid-row-end: 29;
+  width:100%;
+  height:1px;
+  background:rgb(207, 207, 207);
+}
+.whyus{
+  transform: scale(1.04);
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.315);
+  background-color: #4834d4;
+  background-image: linear-gradient(315deg, #4834d4 -40%, #0c0c0c 64%);
+  border-radius: 15px;
+text-shadow:0.5px 0.5px rgba(0, 0, 0, 0.281);
+color:white;
+  grid-column: 1/32;
+  grid-row: 27/33;
+}
+.whyus h1{
+  text-align: center;
+  margin-bottom: 3px;
+}
+
+
+/*-------------------Midbody Up-------------------*/
+/*------------------Footer Below------------------*/
+.footer{
+  color:black;
+  border:1px solid  green;
+}
+.footer *{
+}
+.gpsmap{
+  height:50vh;
+  width:100vh;
+  border:1px solid red;
+}
+
+</style>
 </head>
 <body>
     <div class="preloader">
@@ -220,8 +452,8 @@ background: radial-gradient(circle, rgba(213,213,213,1) 16%, rgba(255,201,0,1) 3
         </div>
         <div class="preloadertext">Welcome to E-Cell of IIIT Sonepat</div>
     </div>
+    <a href="homepage.html" class="logo"></a>
     <div class="homepage">
-        <a href="homepage.html" class="logo"></a>
         <div class="header">
             <div class="nav nav_beforepreload">
                 <a href="homepage.html" class="home">Home</a>
@@ -235,30 +467,115 @@ background: radial-gradient(circle, rgba(213,213,213,1) 16%, rgba(255,201,0,1) 3
             <div class="heading">E-Cell IIIT Sonepat</div>
             <div class="tagline">Dream, Create and Inspire...</div>
         </div>
-    </div>
+       </div>
+       <div class="social">
+        <a href="https://www.instagram.com/ecell.iiitsonepat/" class="instagram" target="_blank">&nbsp;</a>
+        <a href="https://www.facebook.com/E-Cell-IIIT-Sonepat-113917040446486" class="facebook" target="_blank">&nbsp;</a>
+        <a href="https://www.linkedin.com/company/e-cell-iiit-sonepat/" class="linkedin" target="_blank">&nbsp;</a>
+        <a href="https://www.youtube.com/" class="youtube" target="_blank">&nbsp;</a>
+        </div>
+       <div class="midbody"> 
+           <div class="quotegenerator">
+               <div class="quote">Quote</div>
+               <div class="writer">WriterName</div>
+            </div>
+           <div class="lineafterquote"></div>
+           <div class="compendium">
+               <h1>Compendium</h1>
+               <h4>Content</h4>
+            </div>
+           <div class="lineaftercompendium"></div>
+           <div class="motive">
+               <h1 class="motiveheading">Our Motive</h1>
+               <div class="motives"></div>
+           </div>
+           <div class="lineaftermotive"></div>
+           <div class="whyus">
+               <h1>Why Us???</h1>
+        </div>
+       </div>
+       <div class="footer">
+       
+       <div class="gpsmap">GPS MAP</div>
+           <div class="importantlinks">Important Links</div>
+       </div>
     <script>/*-----------------BELOW IS PRELOADER-------------*/
 
-        let timer1
-        let preloader=document.querySelector('.preloader')
-        let nav=document.querySelector('.nav');
-        timer1=setInterval(()=>{
-        preloader.classList.add('endpreloadopacity');
-        setTimeout(timer1);
-        document.body.style.background="white";
-        },4500)
-        let timer2= setInterval(()=>{
-            nav.classList.remove('nav_beforepreload');
-            setTimeout(timer2);
-            document.body.style.transition="0s none";
-        document.body.style.transition.delay="none";
-        document.querySelector('.headervdo').classList.add('headervdo_afterpreload');
-        },4600)
-        let timer3= setInterval(()=>{
-            preloader.style.display='none';
-            setTimeout(timer3);
-        },5500)
-        
-        /*-----------------ABOVE WAS PRELOADER-------------*/
-        </script>
+      let timer1
+      let preloader=document.querySelector('.preloader')
+      let nav=document.querySelector('.nav');
+      timer1=setInterval(()=>{
+      preloader.classList.add('endpreloadopacity');
+      setTimeout(timer1);
+      
+      },4500)
+      let timer2= setInterval(()=>{
+          nav.classList.remove('nav_beforepreload');
+          setTimeout(timer2);
+          document.body.style.transition="0s none";
+      document.body.style.transition.delay="none";
+      document.querySelector('.headervdo').classList.add('headervdo_afterpreload');
+      },4600)
+      let timer3= setInterval(()=>{
+          preloader.style.display='none';
+          setTimeout(timer3);
+      },5500)
+      
+      /*-----------------ABOVE WAS PRELOADER-------------*/
+      
+      let quotes = [ {"quote": `You see things; and you say, ‘Why?' But I dream things that never were; and I say, ‘Why not?'`, "writer":"George Bernard Shaw"},
+      {"quote":`You are never too old to set another goal or to dream a new dream.` , "writer":"C.S. Lewis"},
+      {"quote": `A man is not old until regrets take the place of dreams.`, "writer":"John Barrymore"},
+      {"quote":`The only thing that will stop you from fulfilling your dreams is you.` , "writer":"Tom Bradley"},
+      {"quote": `The only thing worse than starting something and failing … is not starting something.`, "writer":"Seth Godin"},
+      {"quote": `The future belongs to those who believe in the beauty of their dreams.` , "writer":"Eleanor Roosevelt"},
+      {"quote": `Remember to celebrate milestones as you prepare for the road ahead.`, "writer":"Nelson Mandela"},
+      {"quote": `It may be that those who do most, dream most.`, "writer":"Stephen Butler Leacock"},
+      {"quote": `Rome wasn't built in a day`, "writer":"John Heywood"},
+      {"quote": `To lose patience is to lose the battle.` , "writer":"Mahatma Gandhi"},
+      {"quote": `Patience is necessary, and one cannot reap immediately where one has sown.`, "writer":"Soren Kierkegaard"},
+      {"quote": `If I have done the public any service, it is due to my patient thought.`, "writer":" Isaac Newton"},
+      {"quote": `He that can have patience can have what he will.`, "writer":"Benjamin Franklin"},
+      {"quote": `Nature never rushes, yet everything gets done.`, "writer":"Lao Tzu"},
+      {"quote": `All our dreams can come true, if we have the courage to pursue them.`, "writer":"Walt Disney"},
+      {"quote": `Tough times never last, but tough people do.`, "writer":"Robert H. Schuller"},
+      {"quote": `I don't believe in taking right decisions. I take decisions and then make them right.` , "writer":"Ratan Tata"},
+      {"quote": `Success is when Your signature changes to autograph`, "writer":"Abdul Kalam"},
+      {"quote": `Kill them with success and bury them with a smile.`, "writer":" Leonardo DiCaprio"},
+      {"quote": `Whenever I watch someone doing something, even if it doesn’t turn out so great, I at least admire their intentions and stuff.`, "writer":"Robert Downey Jr."},
+      {"quote": "You miss 100% of the shots you don't take.", "writer":"Wayne Gretzky"},
+      {"quote": "Avoiding danger is no safer in the long run than outright exposure. The fearful are caught as often as the bold.", "writer":"Helen Keller"},
+      {"quote": "I'm not afraid of storms, for I'm learning how to sail my ship.", "writer":"Louisa May Alcott"},
+      {"quote": "Don't let the fear of striking out hold you back.", "writer":"Babe Ruth"},
+      {"quote": `The secret of getting ahead is getting started.`, "writer":"Mark Twain"},
+      {"quote": `I wake up every morning and think to myself, ‘how far can I push this company in the next 24 hours.`, "writer":"Leah Busque"},
+      {"quote": `Do one thing every day that scares you.`, "writer":"Eleanor Roosevelt"},
+      {"quote": `Whatever you are, be a good one.`, "writer" : "Abraham Lincoln"}];
+      let quotedisplay=document.querySelector('.quote');
+      let writerdisplay=document.querySelector('.writer');
+      let currentdate = new Date;
+      let currentsec = currentdate.getSeconds();
+      let changedsec= currentsec;
+      let random =1;
+      let value=changedsec;
+      setInterval(()=>value=value+1,470)
+      setInterval(()=>{
+          changedsec++;
+          if(Math.abs(changedsec-currentsec)%8==0)
+          { 
+              quotedisplay.style.opacity=0;
+              writerdisplay.style.opacity=0;
+          }
+          if(Math.abs(changedsec-currentsec)%8==1)
+          {   
+              quotedisplay.innerHTML=`"${quotes[value%28].quote}"` ;
+              writerdisplay.innerHTML=`~${quotes[value%28].writer}`;
+              quotedisplay.style.opacity=1;
+              writerdisplay.style.opacity=1;
+          }
+      },1000)
+      setInterval(()=>{
+          document.querySelector('').classList.toggle('bulbing');
+      },2000)</script>
 </body>
 </html>
