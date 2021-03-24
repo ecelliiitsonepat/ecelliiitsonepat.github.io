@@ -6,7 +6,7 @@ let nav=document.querySelector('.nav');
 timer1=setInterval(()=>{
 preloader.classList.add('endpreloadopacity');
 setTimeout(timer1);
-document.body.style.background="white";
+
 },4500)
 let timer2= setInterval(()=>{
     nav.classList.remove('nav_beforepreload');
@@ -55,22 +55,21 @@ let writerdisplay=document.querySelector('.writer');
 let currentdate = new Date;
 let currentsec = currentdate.getSeconds();
 let changedsec= currentsec;
+let random =1;
+let value=changedsec;
+setInterval(()=>value=value+1,470)
 setInterval(()=>{
     changedsec++;
-    if(Math.abs(currentsec-changedsec)%8==0)
+    if(Math.abs(changedsec-currentsec)%8==0)
     { 
         quotedisplay.style.opacity=0;
         writerdisplay.style.opacity=0;
     }
-    if(Math.abs(currentsec-changedsec)%8==1)
-    {   let value=changedsec%28;
-        quotedisplay.innerHTML=`"${quotes[value].quote}"` ;
-        writerdisplay.innerHTML=`~${quotes[value].writer}`;
+    if(Math.abs(changedsec-currentsec)%8==1)
+    {   
+        quotedisplay.innerHTML=`"${quotes[value%28].quote}"` ;
+        writerdisplay.innerHTML=`~${quotes[value%28].writer}`;
         quotedisplay.style.opacity=1;
         writerdisplay.style.opacity=1;
-    }
-    if(Math.abs(currentsec-changedsec)%60==0)
-    {
-        changedsec=changedsec+3;
     }
 },1000)
