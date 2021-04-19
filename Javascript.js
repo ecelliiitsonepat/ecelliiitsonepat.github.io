@@ -2,7 +2,7 @@
 
 let timer1
 let preloader=document.querySelector('.preloader')
-let nav=document.querySelector('.nav');
+let nav=document.querySelector('.navbar');
 timer1=setInterval(()=>{
 preloader.classList.add('endpreloadopacity');
 setTimeout(timer1);
@@ -73,3 +73,6 @@ setInterval(()=>{
         writerdisplay.style.opacity=1;
     }
 },1000)
+let gpsmap=document.querySelector('.gpsmap')
+console.log(gpsmap)
+setInterval(()=>gpsmap.width=(window.screen.width),100)

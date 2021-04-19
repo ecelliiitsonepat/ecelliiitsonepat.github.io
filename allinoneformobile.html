@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Cell | IIIT Sonepat</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+   
 <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Josefin+Sans&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -15,7 +16,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
-<style>*{box-sizing: border-box;
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing: border-box;
 }
 body{
   margin:0;
@@ -23,7 +30,7 @@ body{
     transition-delay: 570ms;
     font-family: 'Poiret One', 'Josefin Sans''Architects Daughter', cursive;
 color:white;
-width:100vw;
+width: 100vw;
 overflow-x: hidden;
 height:200vh;
 background-color: #E9ECEF;
@@ -93,44 +100,35 @@ grid-template-rows: repeat(18,4vh);
 width:100%;
 overflow-x: hidden;
 }
-.nav{
-  z-index: 1;
-  position:sticky;
-  top:0;
-  width:100%;
-  margin-top: 1vh;
-  padding:calc(2px + 1vw);
-  padding-right:calc(5px + 1vw);
-  font: bolder calc(5px + 2vw);
-  display:relative;
-  text-align:right;
-  background: rgb(0,0,0);
-  width:99%;
+.navi{
+  z-index: 4;
+}
+
+*{
   box-sizing: border-box;
-  transform: translateX(1vw);
-background: linear-gradient(90deg, rgba(0,0,0,1) 29%, rgba(250,203,30,0.6842087176667542) 49%);
-position:absolute;
 }
-.nav *{
-  text-decoration: none;
-  color:#e0e0e0;
+body{
+  margin:0;
+  padding:0;
+}
+.navbar{
+  transform: scale(1.01);
   background: transparent;
-  font-size: calc(10px + 1vw);
-  padding:5px;
-  padding-right:12.5px;
-  padding-left:12.5px;
-  margin-left:5px;
-  margin-right:5px;
-  border-radius:10px;
-  letter-spacing: 1.2px;
 }
-.ourteam{
-  margin-right:0;
+.nav-link{
+  color:white !important;
+  border-radius: 9px;
 }
-.nav *:hover{
-background:rgb(255, 255, 255);
-color:#e6ba1ae0;
-transition:500ms;
+.navbar-toggler{
+  background:white !important;
+}
+.active{
+  background: var(--bs-yellow);
+  color: black !important;
+}
+.nav-link:hover , .nav-link:focus, .nav-link:active{
+  background: var(--bs-yellow);
+  color: black !important;
 }
 .header{
   float:left;
@@ -165,7 +163,7 @@ transition:500ms;
   opacity:100;
 }
 .logo{
-  z-index: 2;
+  z-index: 5;
   padding:25px;
   margin-left:calc(2vh + 5px);
   background:url("logo.jpeg");
@@ -291,156 +289,62 @@ transform: scale(1.05);
 }
 
 /*--------------------Mid_Body Below------------------*/
-
+.borderup{
+  background: transparent;
+  padding: 10px;
+  border-radius: 25px;
+  border-bottom: 2px rgb(107, 107, 107) solid;
+  width: 63vw;
+  position: relative;
+  left: 17vw;
+}
+.borderdown{
+  background: transparent;
+  padding: 10px;
+  border-radius: 25px;
+  border-top: 2px rgb(92, 92, 92) solid;
+  width: 63vw;
+  position: relative;
+  left: 17vw;
+}
 .midbody{
-  font-family: 'Poiret One', cursive;
-  margin:4vh 3vw 4vh 3vw;
-  color:black;
-  display:grid;
-  grid-template-columns: repeat(33,3vw);
-  grid-template-rows: repeat(33,6vh);
+
+  background: #080708;
+  font-family: 'Josefin Slab', serif;
   
+
 }
 .quotegenerator{
-  color:black;
-  grid-column-start: 3;
-  grid-column-end: 30;
-  grid-row-start: 2;
-  grid-row-end: 6;
-  display:grid;
-  grid-template-columns: repeat(27,3vw);
-  grid-template-rows: repeat(12,2vh);
-  transform: scale(1.04);
-  text-align: center;
-  padding-top: 1vh;
-  padding:3px;
-  box-shadow: 3px 3px rgba(0, 0, 0, 0.267);
-font-family: 'Dancing Script', cursive;
-font-size: 24px;
-text-shadow:0.2px 0.2px rgba(0, 0, 0, 0.281);
-border-radius: 13px;
-color:#CED4DA;
-font-weight: 600;
-background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+  position: relative;
+  font-family:'Dancing Script';
+  letter-spacing: 0.2em;
+  
 }
-
+.quotegenerator *{
+  font-size: 1.1em;
+}
 .quote{
-  grid-column-start: 1;
-  grid-column-end: 28;
-  grid-row-start:3;
-  grid-row-end:8;
-  transition:1s ease-out all;
+  transition: 1s ease-in-out;
 }
 .writer{
-  grid-column-start: 1;
-  grid-column-end: 28;
-  grid-row-start: 8;
-  grid-row-end:10;
-  text-align: center;
-  transition:1s ease-out all;
-}
-@media only screen and (max-width: 700px) {
-  .quotegenerator{
-    font-size: 17px;
-    text-shadow:0.2px 0.2px rgba(0, 0, 0, 0.281);
-  }
-  .writer{
-    grid-row-start: 9;
-  }
-}
-.lineafterquote{
-grid-column-start: 4;
-grid-column-end: 29;
-grid-row-start: 7;
-grid-row-end: 7;
-width:100%;
-height:1px;
-background:rgb(207, 207, 207);
-}
-.compendium{
-  color:white;
-  grid-column: 1/32;
-  transform: scale(1.04);
-  grid-row: 8/15;
-  box-shadow: 4px 4px rgba(0, 0, 0, 0.315);
-  background-color: #4834d4;
-background-image: linear-gradient(315deg, #4834d4 -45%, #0c0c0c 60%);
-border-radius: 15px;
-text-shadow:0.5px 0.5px rgba(0, 0, 0, 0.281);
-/*background: linear-gradient(to bottom right, #013374 22%, #c70046 99%);*/
-
-padding:5px;
-}
-.compendium h1{
-  text-align: center;
-  margin-bottom: 3px;
-}
-.compendium h4{
-  text-align: center;
-}
-.lineaftercompendium{
-  grid-column-start: 4;
-grid-column-end: 29;
-grid-row-start: 16;
-grid-row-end: 16;
-width:100%;
-height:1px;
-background:rgb(207, 207, 207);
-}
-.motive{
-  grid-column: 1/32;
-  transform: scale(1.04);
-  grid-row: 17/25;
-  box-shadow: 4px 4px rgba(0, 0, 0, 0.315);
-  background-color: #4834d4;
-  background-image: linear-gradient(315deg, #4834d4 -40%, #0c0c0c 64%);
-  border-radius: 15px;
-text-shadow:0.5px 0.5px rgba(0, 0, 0, 0.281);
-color:white;
-}
-.motive h1{
-  text-align: center;
-  margin-bottom: 3px;
-
-}
-.lineaftermotive{
-  grid-column-start: 4;
-  grid-column-end: 26;
-  grid-row-start: 26;
-  grid-row-end: 29;
-  width:100%;
-  height:1px;
-  background:rgb(207, 207, 207);
-}
-.whyus{
-  transform: scale(1.04);
-  box-shadow: 4px 4px rgba(0, 0, 0, 0.315);
-  background-color: #4834d4;
-  background-image: linear-gradient(315deg, #4834d4 -40%, #0c0c0c 64%);
-  border-radius: 15px;
-text-shadow:0.5px 0.5px rgba(0, 0, 0, 0.281);
-color:white;
-  grid-column: 1/32;
-  grid-row: 27/33;
-}
-.whyus h1{
-  text-align: center;
-  margin-bottom: 3px;
+position: absolute;
+bottom: 0;
+right: 0;
+transition: 1s ease-in-out;
 }
 
+.card-img{
+opacity: 0.4;
 
+}
+.dream:hover, .create:hover, .inspire:hover{
+  transition: 200ms all ease-in-out;
+  transform: scale(1.02);
+}
 /*-------------------Midbody Up-------------------*/
 /*------------------Footer Below------------------*/
 .footer{
-  color:black;
-  border:1px solid  green;
-}
-.footer *{
-}
-.gpsmap{
-  height:50vh;
-  width:100vh;
-  border:1px solid red;
+  background:#080708;
 }
 
 </style>
@@ -455,17 +359,37 @@ color:white;
     <a href="homepage.html" class="logo"></a>
     <div class="homepage">
         <div class="header">
-            <div class="nav nav_beforepreload">
-                <a href="homepage.html" class="home">Home</a>
-                <a href="" class="events">Events</a>
-                <a href="" class="aboutus">About Us</a>
-                <a href="" class="ourteam">Our Team</a>
-            </div>
+          <div class="container-fluid p-1 navi position-fixed end-0 mt-2 mx-3 bg-transparent">
+            <nav class="navbar nav_beforepreload navbar-expand-lg navbar-light">
+                <div class="container-fluid justify-content-end">
+                  <button class="navbar-toggler"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse flex-row justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                      <li class="nav-item  mt-1 mt-lg-0 mx-1">
+                        <a class="nav-link active px-3" aria-current="page" href="#">Home</a>
+                      </li>
+                      <li class="nav-item mx-1">
+                        <a class="nav-link px-3" href="#">Events</a>
+                      </li>
+                      <li class="nav-item mx-1">
+                        <a class="nav-link px-3" href="#">About Us</a>
+                      </li>
+                      <li class="nav-item mx-1">
+                        <a class="nav-link px-3" href="#">Our Team</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </nav>
+          </div>
             <div class="headervdocontainer headervdocontainer_afterpreload">
                 <video src="headervdo.mp4" class="headervdo hvdo_afterpreload" loop muted autoplay></video>
             </div>
             <div class="heading">E-Cell IIIT Sonepat</div>
             <div class="tagline">Dream, Create and Inspire...</div>
+            
         </div>
        </div>
        <div class="social">
@@ -474,108 +398,198 @@ color:white;
         <a href="https://www.linkedin.com/company/e-cell-iiit-sonepat/" class="linkedin" target="_blank">&nbsp;</a>
         <a href="https://www.youtube.com/" class="youtube" target="_blank">&nbsp;</a>
         </div>
-       <div class="midbody"> 
-           <div class="quotegenerator">
-               <div class="quote">Quote</div>
-               <div class="writer">WriterName</div>
-            </div>
-           <div class="lineafterquote"></div>
-           <div class="compendium">
-               <h1>Compendium</h1>
-               <h4>Content</h4>
-            </div>
-           <div class="lineaftercompendium"></div>
-           <div class="motive">
-               <h1 class="motiveheading">Our Motive</h1>
-               <div class="motives"></div>
-           </div>
-           <div class="lineaftermotive"></div>
-           <div class="whyus">
-               <h1>Why Us???</h1>
-        </div>
        </div>
-       <div class="footer">
-       
-       <div class="gpsmap">GPS MAP</div>
-           <div class="importantlinks">Important Links</div>
-       </div>
-    <script>/*-----------------BELOW IS PRELOADER-------------*/
 
-      let timer1
-      let preloader=document.querySelector('.preloader')
-      let nav=document.querySelector('.nav');
-      timer1=setInterval(()=>{
-      preloader.classList.add('endpreloadopacity');
-      setTimeout(timer1);
+
+    <div class="container-fluid midbody min-vh-100 py-5" >
+      <div class="borderup"></div>
+      <div class="borderdown"></div>
+      <div class="d-flex justify-content-center mb-4 mt-1">
+      <div class="card quotegenerator bg-transparent border-0">
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <h4 class="quote mb-4"></h4>
+           <cite title="Source Title" class="writer text-muted">Source Title</cite>
+          </blockquote>
+        </div>
+      </div>
+      </div>
+      <div class="borderup"></div>
+      <div class="borderdown"></div>
+      <div class="compendium mt-5 card mb-4 mb-md-5 offset-lg-1 container-fluid col-lg-10" style="background-color: #080708;">
+        <h1 class="mb-4 display-4" style="text-align: center;"><i class="fas fa-book" style="color:#0000b2"></i>&nbsp;&nbsp;Compendium</h1>
+        <div class="row g-0">
+          <div class="col-md-6">
+            <img src="https://i.postimg.cc/vHZxwC8x/pexels-photo-428062.jpg" class="img-fluid" alt="...">
+          </div>
+          <div class="col-md-6">
+            <div class="card-body">
+              <p class="card-text" style="font-size: calc(12px + 0.6vw); text-align: center; margin-top: 1vh;">Dandelions, one of the beautiful flowers, need a push for their seeds to disperse so that one more child may smile upon seeing it. We, the members of Enterprenuership Cell of IIIT Sonepat, lookout for the seed (capable of contributing to a greater extent to those in need) among the youngsters with passion, ambition and will to achieve their dream. Just as the gust, We look out for them and provide them with the knowledge and guidance so that when the end of this journey approaches, they discover that this is just the beginning</p>
+              <p class="card-text"><small class="text-muted"></small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="borderup"></div>
+      <div class="borderdown"></div>
+
       
-      },4500)
-      let timer2= setInterval(()=>{
-          nav.classList.remove('nav_beforepreload');
-          setTimeout(timer2);
-          document.body.style.transition="0s none";
-      document.body.style.transition.delay="none";
-      document.querySelector('.headervdo').classList.add('headervdo_afterpreload');
-      },4600)
-      let timer3= setInterval(()=>{
-          preloader.style.display='none';
-          setTimeout(timer3);
-      },5500)
-      
-      /*-----------------ABOVE WAS PRELOADER-------------*/
-      
-      let quotes = [ {"quote": `You see things; and you say, ‘Why?' But I dream things that never were; and I say, ‘Why not?'`, "writer":"George Bernard Shaw"},
-      {"quote":`You are never too old to set another goal or to dream a new dream.` , "writer":"C.S. Lewis"},
-      {"quote": `A man is not old until regrets take the place of dreams.`, "writer":"John Barrymore"},
-      {"quote":`The only thing that will stop you from fulfilling your dreams is you.` , "writer":"Tom Bradley"},
-      {"quote": `The only thing worse than starting something and failing … is not starting something.`, "writer":"Seth Godin"},
-      {"quote": `The future belongs to those who believe in the beauty of their dreams.` , "writer":"Eleanor Roosevelt"},
-      {"quote": `Remember to celebrate milestones as you prepare for the road ahead.`, "writer":"Nelson Mandela"},
-      {"quote": `It may be that those who do most, dream most.`, "writer":"Stephen Butler Leacock"},
-      {"quote": `Rome wasn't built in a day`, "writer":"John Heywood"},
-      {"quote": `To lose patience is to lose the battle.` , "writer":"Mahatma Gandhi"},
-      {"quote": `Patience is necessary, and one cannot reap immediately where one has sown.`, "writer":"Soren Kierkegaard"},
-      {"quote": `If I have done the public any service, it is due to my patient thought.`, "writer":" Isaac Newton"},
-      {"quote": `He that can have patience can have what he will.`, "writer":"Benjamin Franklin"},
-      {"quote": `Nature never rushes, yet everything gets done.`, "writer":"Lao Tzu"},
-      {"quote": `All our dreams can come true, if we have the courage to pursue them.`, "writer":"Walt Disney"},
-      {"quote": `Tough times never last, but tough people do.`, "writer":"Robert H. Schuller"},
-      {"quote": `I don't believe in taking right decisions. I take decisions and then make them right.` , "writer":"Ratan Tata"},
-      {"quote": `Success is when Your signature changes to autograph`, "writer":"Abdul Kalam"},
-      {"quote": `Kill them with success and bury them with a smile.`, "writer":" Leonardo DiCaprio"},
-      {"quote": `Whenever I watch someone doing something, even if it doesn’t turn out so great, I at least admire their intentions and stuff.`, "writer":"Robert Downey Jr."},
-      {"quote": "You miss 100% of the shots you don't take.", "writer":"Wayne Gretzky"},
-      {"quote": "Avoiding danger is no safer in the long run than outright exposure. The fearful are caught as often as the bold.", "writer":"Helen Keller"},
-      {"quote": "I'm not afraid of storms, for I'm learning how to sail my ship.", "writer":"Louisa May Alcott"},
-      {"quote": "Don't let the fear of striking out hold you back.", "writer":"Babe Ruth"},
-      {"quote": `The secret of getting ahead is getting started.`, "writer":"Mark Twain"},
-      {"quote": `I wake up every morning and think to myself, ‘how far can I push this company in the next 24 hours.`, "writer":"Leah Busque"},
-      {"quote": `Do one thing every day that scares you.`, "writer":"Eleanor Roosevelt"},
-      {"quote": `Whatever you are, be a good one.`, "writer" : "Abraham Lincoln"}];
-      let quotedisplay=document.querySelector('.quote');
-      let writerdisplay=document.querySelector('.writer');
-      let currentdate = new Date;
-      let currentsec = currentdate.getSeconds();
-      let changedsec= currentsec;
-      let random =1;
-      let value=changedsec;
-      setInterval(()=>value=value+1,470)
-      setInterval(()=>{
-          changedsec++;
-          if(Math.abs(changedsec-currentsec)%8==0)
-          { 
-              quotedisplay.style.opacity=0;
-              writerdisplay.style.opacity=0;
-          }
-          if(Math.abs(changedsec-currentsec)%8==1)
-          {   
-              quotedisplay.innerHTML=`"${quotes[value%28].quote}"` ;
-              writerdisplay.innerHTML=`~${quotes[value%28].writer}`;
-              quotedisplay.style.opacity=1;
-              writerdisplay.style.opacity=1;
-          }
-      },1000)
-      setInterval(()=>{
-          document.querySelector('').classList.toggle('bulbing');
-      },2000)</script>
+    <div class="aim container-fluid col-sm-10 offset-sm-1 text-center mt-5">
+     <h1 class="display-4"><i class="fas fa-fire" style="color: 	#800909;"></i>&nbsp;&nbsp;Our Aim</h1>
+     <p>
+      "I'll be back" one of the most favourite dialogue of Arnold Schwarzenegger from 
+      the one of the best and aspiried sci-fi movie, "The Terminator". We all have imagined to fight the AI from the 
+      techs, one day if they revolted. but though many were being drawn towards its appeal, there were some who instead 
+      of dreaming about aliens, thought about creating a  bookstore that isn't possible any other way. He worked more than 
+      one can think of and today we know him as the CEO of Amazon. Jeff Bezoz is now an inspiration for those wanting 
+      to achieve great things in their life. With the mindset of "simple is best" we aim to :-
+     </p>
+    </div>
+    <div class="container-fluid p-0 mx-auto row justify-content-around text-center motives">
+      <div class="container-fluid col-lg-4 dream mb-2 p-2" >
+        <div class="card bg-dark text-white" style="border-radius: 12px;">
+          <img src="https://images.pexels.com/photos/1535907/pexels-photo-1535907.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img img-fluid" alt="...">
+          <div class="card-img-overlay d-flex flex-column justify-content-around">
+            <h1 class="card-title"><i class="fas fa-star-and-crescent" style="color: #ffd500;"></i>&nbsp;&nbsp;Dream</h1>
+            <h5 class="card-text">indulging in daydreams or something which only one itself can think of,</h5>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid col-lg-4 create p-2" >
+        <div class="card bg-dark text-white" style="border-radius: 12px;">
+          <img src="https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img img-fluid" alt="...">
+          <div class="card-img-overlay d-flex flex-column justify-content-around">
+            <h1 class="card-title"><i class="fas fa-pen-alt" style="color: #1b98e0;"></i>&nbsp;&nbsp;Create</h1>
+            <h5 class="card-text">Gathering tools to turn the makebelieve world to believe world and</h5>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid col-lg-4 inspire p-2" >
+        <div class="card bg-dark text-white" style="border-radius: 12px;"> 
+          <img src="https://images.pexels.com/photos/4428041/pexels-photo-4428041.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img img-fluid" alt="...">
+          <div class="card-img-overlay d-flex flex-column justify-content-around">
+            <h1 class="card-title"><i class="fas fa-jedi" style="color: #e01e37;"></i>&nbsp;&nbsp;Inspire</h1>
+            <h5 class="card-text">boosting confidence of those who are oppressed by those who cant think out of box. We aim to explore the wasteland of unknown with the courageous minds.</h5>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="borderup mt-4"></div>
+    <div class="borderdown mb-4"></div>
+    <div class="whyus mt-5 card mb-3 mb-md-5 offset-lg-1 container-fluid col-lg-10" style="background-color: #080708;">
+      <h1 class="mb-4 display-4" style="text-align: center;"><i class="fas fa-question"></i>&nbsp;&nbsp;Why Us</h1>
+      <div class="row g-0">
+        <div class="col-md-6">
+          <img src="https://images.pexels.com/photos/3077882/pexels-photo-3077882.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-fluid" alt="...">
+        </div>
+        <div class="col-md-6">
+          <div class="card-body">
+            <p class="card-text" style="font-size: calc(12px + 0.6vw); text-align: center; margin-top: 1vh;">We at E-cell of IIIT Sonepat 
+              aim to provide you with the knowledge and expereince of those who are already on this path so that
+              u can learn from what they have been through and then carve your own path. We may not seem to be as 
+              vast as ocean but we have started our journey down the mountain and will meet and discover more secrets, 
+              with no will to turn back. So, join the expedition of exploring the unknown of your creativity and let it flow.
+              </p>
+            <p class="card-text"><small class="text-muted"></small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr style="color: grey;;">
+    </div>
+     <!--Midbody Ended-->
+     <!--Footer Started-->
+     <div class="footer container-fluid p-0 m-0">
+    <div class="map container-fluid overflow-hidden p-0 m-0">
+      <h1 class="display-4 text-center mb-3"><i class="fas fa-map-marker-alt" style="color: #1EA362;"></i>&nbsp;  Reach Us</h1>
+      <iframe class="gpsmap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6982.315943306847!2d77.10393908409192!3d28.95303863380321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390daddf6cade053%3A0xfd7ceeb61e0dbbe1!2sIIT%20Delhi%20Sonipat%20Campus!5e0!3m2!1sen!2sin!4v1618445149546!5m2!1sen!2sin" width="" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+  <!--Footer Ended-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+  <script>
+    /*-----------------BELOW IS PRELOADER-------------*/
+
+let timer1
+let preloader=document.querySelector('.preloader')
+let nav=document.querySelector('.navbar');
+timer1=setInterval(()=>{
+preloader.classList.add('endpreloadopacity');
+setTimeout(timer1);
+
+},500)
+let timer2= setInterval(()=>{
+    nav.classList.remove('nav_beforepreload');
+    setTimeout(timer2);
+    document.body.style.transition="0s none";
+document.body.style.transition.delay="none";
+document.querySelector('.headervdo').classList.add('headervdo_afterpreload');
+},4600)
+let timer3= setInterval(()=>{
+    preloader.style.display='none';
+    setTimeout(timer3);
+},5500)
+
+/*-----------------ABOVE WAS PRELOADER-------------*/
+
+let quotes = [ {"quote": `You see things; and you say, ‘Why?' But I dream things that never were; and I say, ‘Why not?'`, "writer":"George Bernard Shaw"},
+{"quote":`You are never too old to set another goal or to dream a new dream.` , "writer":"C.S. Lewis"},
+{"quote": `A man is not old until regrets take the place of dreams.`, "writer":"John Barrymore"},
+{"quote":`The only thing that will stop you from fulfilling your dreams is you.` , "writer":"Tom Bradley"},
+{"quote": `The only thing worse than starting something and failing … is not starting something.`, "writer":"Seth Godin"},
+{"quote": `The future belongs to those who believe in the beauty of their dreams.` , "writer":"Eleanor Roosevelt"},
+{"quote": `Remember to celebrate milestones as you prepare for the road ahead.`, "writer":"Nelson Mandela"},
+{"quote": `It may be that those who do most, dream most.`, "writer":"Stephen Butler Leacock"},
+{"quote": `Rome wasn't built in a day`, "writer":"John Heywood"},
+{"quote": `To lose patience is to lose the battle.` , "writer":"Mahatma Gandhi"},
+{"quote": `Patience is necessary, and one cannot reap immediately where one has sown.`, "writer":"Soren Kierkegaard"},
+{"quote": `If I have done the public any service, it is due to my patient thought.`, "writer":" Isaac Newton"},
+{"quote": `He that can have patience can have what he will.`, "writer":"Benjamin Franklin"},
+{"quote": `Nature never rushes, yet everything gets done.`, "writer":"Lao Tzu"},
+{"quote": `All our dreams can come true, if we have the courage to pursue them.`, "writer":"Walt Disney"},
+{"quote": `Tough times never last, but tough people do.`, "writer":"Robert H. Schuller"},
+{"quote": `I don't believe in taking right decisions. I take decisions and then make them right.` , "writer":"Ratan Tata"},
+{"quote": `Success is when Your signature changes to autograph`, "writer":"Abdul Kalam"},
+{"quote": `Kill them with success and bury them with a smile.`, "writer":" Leonardo DiCaprio"},
+{"quote": `Whenever I watch someone doing something, even if it doesn’t turn out so great, I at least admire their intentions and stuff.`, "writer":"Robert Downey Jr."},
+{"quote": "You miss 100% of the shots you don't take.", "writer":"Wayne Gretzky"},
+{"quote": "Avoiding danger is no safer in the long run than outright exposure. The fearful are caught as often as the bold.", "writer":"Helen Keller"},
+{"quote": "I'm not afraid of storms, for I'm learning how to sail my ship.", "writer":"Louisa May Alcott"},
+{"quote": "Don't let the fear of striking out hold you back.", "writer":"Babe Ruth"},
+{"quote": `The secret of getting ahead is getting started.`, "writer":"Mark Twain"},
+{"quote": `I wake up every morning and think to myself, ‘how far can I push this company in the next 24 hours.`, "writer":"Leah Busque"},
+{"quote": `Do one thing every day that scares you.`, "writer":"Eleanor Roosevelt"},
+{"quote": `Whatever you are, be a good one.`, "writer" : "Abraham Lincoln"}];
+let quotedisplay=document.querySelector('.quote');
+let writerdisplay=document.querySelector('.writer');
+let currentdate = new Date;
+let currentsec = currentdate.getSeconds();
+let changedsec= currentsec;
+let random =1;
+let value=changedsec;
+setInterval(()=>value=value+1,470)
+setInterval(()=>{
+    changedsec++;
+    if(Math.abs(changedsec-currentsec)%8==0)
+    { 
+        quotedisplay.style.opacity=0;
+        writerdisplay.style.opacity=0;
+    }
+    if(Math.abs(changedsec-currentsec)%8==1)
+    {   
+        quotedisplay.innerHTML=`"${quotes[value%28].quote}"` ;
+        writerdisplay.innerHTML=`~${quotes[value%28].writer}`;
+        quotedisplay.style.opacity=1;
+        writerdisplay.style.opacity=1;
+    }
+},1000)
+let gpsmap=document.querySelector('.gpsmap')
+console.log(gpsmap)
+setInterval(()=>gpsmap.width=(window.screen.width),100)
+  </script>
+  <script src="https://kit.fontawesome.com/9193db61db.js" crossorigin="anonymous"></script>
 </body>
 </html>
