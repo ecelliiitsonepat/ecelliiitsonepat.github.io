@@ -1,4 +1,5 @@
 # Ecell-IIIT-Sonepat-Site
 
 Preloader - Ready <br>
-Tempelate - Ready
+Tempelate - Ready <br>
+Event page - Ready
