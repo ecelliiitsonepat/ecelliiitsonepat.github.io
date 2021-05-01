@@ -142,7 +142,7 @@ text-decoration: none;
   filter:contrast(0.8);
 }
 .linkedin{
-background:url("linkedin.png") no-repeat;
+background:url("../linkedin.png") no-repeat;
 background-position: center;
 background-size:110%;
 transition:ease-in-out all 250ms ;
