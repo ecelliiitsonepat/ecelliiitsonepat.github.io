@@ -70,7 +70,7 @@ body{
   z-index: 5;
   padding:25px;
   margin-left:calc(2vh + 5px);
-  background:url("logo.jpeg");
+  background:url("../logo.jpeg");
   background-repeat: no-repeat;
   float:top;
   background-size: cover;
