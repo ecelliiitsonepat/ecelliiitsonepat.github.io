@@ -1,4 +1,4 @@
-# Ecell-IIIT-Sonepat-Site
+# ecelliiitsonepat.github.io
 
 Preloader - Ready <br>
 Tempelate - Ready <br>
