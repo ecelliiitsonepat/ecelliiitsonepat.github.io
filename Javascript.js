@@ -74,5 +74,4 @@ setInterval(()=>{
     }
 },1000)
 let gpsmap=document.querySelector('.gpsmap')
-console.log(gpsmap)
 setInterval(()=>gpsmap.width=(window.screen.width),100)
