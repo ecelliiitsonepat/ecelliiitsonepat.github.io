@@ -26,7 +26,6 @@ body{
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  text-transform: uppercase;
   background:#010101;
   /* 220e24  */
 }
@@ -69,6 +68,17 @@ html::-webkit-scrollbar-thumb{
   color: black !important;
 }
 
+.navi{
+  z-index: 4;
+}
+
+.homepage{
+  display:grid;
+width:100%;
+overflow-x: hidden;
+}
+
+
 
 /* navigation bar end */
 
@@ -76,12 +86,13 @@ html::-webkit-scrollbar-thumb{
   font-family:'Josefin Slab', serif;
   color:white;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .border{
   border: 1px solid #ffc107 !important;
   padding: 10px 40px;
-  margin-top: 68px;
+  margin-top: 112px;
 }
 
 .team-heading{
@@ -91,6 +102,7 @@ html::-webkit-scrollbar-thumb{
   font-weight: 400;
   color: white;
   letter-spacing: 5px;
+  text-transform: uppercase;
 }
 
 
@@ -156,7 +168,7 @@ html::-webkit-scrollbar-thumb{
     font-size: 18px;
     text-align: center;
     margin:35px 0 0px;
-
+    text-transform:capitalize;
   }
 
    .info h3 span{
