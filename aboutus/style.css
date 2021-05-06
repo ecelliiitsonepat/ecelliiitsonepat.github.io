@@ -1,7 +1,21 @@
 body {
   background-color: black;
 }
+:root{
+  --maincolor:#f9ca24;
+}
 
+html::-webkit-scrollbar{
+  width:1rem;
+}
+
+html::-webkit-scrollbar-track{
+  background:#080708;
+}
+
+html::-webkit-scrollbar-thumb{
+  background:var(--maincolor);
+}
 .logo{
   z-index: 5;
   padding:25px;
