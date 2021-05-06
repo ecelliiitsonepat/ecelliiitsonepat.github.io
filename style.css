@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
 *{box-sizing: border-box;
 }
 body{
@@ -189,7 +191,7 @@ body{
   background: rgb(213,213,213);
 background: radial-gradient(circle, rgba(213,213,213,1) 16%, rgba(255,201,0,1) 32%, rgba(0,0,0,1) 64%);
  background-size: 200% auto;
-  
+  font-family: 'PT Serif', serif;
   color: #160B1E;
   background-clip: text;
   -webkit-background-clip: text;
