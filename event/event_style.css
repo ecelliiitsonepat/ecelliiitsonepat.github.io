@@ -1213,3 +1213,28 @@ transform: scale(1.05);
   
 }
 
+.footer{
+  background:#080708;
+  font-family: 'Josefin Slab', serif;
+}
+
+@media only screen and (max-width: 992px) {
+  .importantlinks{
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+.importantlinks *{
+  font-family: 'Forum', cursive;
+  font-size: small;
+  color:rgba(133, 132, 132, 0.877);
+}
+.importantlinks a{
+  text-decoration:none;
+}
+.importantlinks a:hover{
+  text-decoration: underline;
+  color:rgba(190, 179, 179, 0.877);
+ 
+}
+
