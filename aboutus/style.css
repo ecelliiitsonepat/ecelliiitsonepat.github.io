@@ -126,6 +126,10 @@ img {
     display: flex !important;
     flex-direction: column !important;
   }
+  .navbar{
+    display: flex !important;
+    flex-direction: column !important;
+  }
 }
 .importantlinks *{
   font-family: 'Forum', cursive;
