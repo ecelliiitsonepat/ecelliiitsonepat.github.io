@@ -122,7 +122,9 @@ img {
     display: flex !important;
     flex-direction: column !important;
   }
-}
+  .navbar-nav{
+    background-color:black;
+}}
 .importantlinks *{
   font-family: 'Forum', cursive;
   font-size: small;
