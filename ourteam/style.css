@@ -22,10 +22,10 @@
 }
 
 body{
-  display: flex;
+/*   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
   background:#010101;
   /* 220e24  */
 }
@@ -81,6 +81,26 @@ overflow-x: hidden;
 
 
 /* navigation bar end */
+
+
+.borderup{
+  background: transparent;
+  padding: 10px;
+  border-radius: 25px;
+  border-bottom: 2px rgb(107, 107, 107) solid;
+  width: 63vw;
+  position: relative;
+  left: 17vw;
+}
+.borderdown{
+  background: transparent;
+  padding: 10px;
+  border-radius: 25px;
+  border-top: 2px rgb(92, 92, 92) solid;
+  width: 63vw;
+  position: relative;
+  left: 17vw;
+}
 
 .main-heading{
   font-family:'Josefin Slab', serif;
