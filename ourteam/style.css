@@ -106,14 +106,14 @@ overflow-x: hidden;
   font-family:'Josefin Slab', serif;
   color:white;
   text-align: center;
-  text-transform: uppercase;
-}
-
-.border{
-  border: 1px solid #ffc107 !important;
+/*   text-transform: uppercase; */
   padding: 10px 40px;
   margin-top: 112px;
 }
+
+/* .border{
+  border: 1px solid #ffc107 !important;
+} */
 
 .team-heading{
   margin: 30px 0;
