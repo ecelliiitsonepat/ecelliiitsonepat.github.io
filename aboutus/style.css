@@ -61,7 +61,13 @@ html::-webkit-scrollbar-thumb{
 }
 
 .about-section {
-  padding: 70px 0px 60px 0px;
+  padding: 130px 0px 60px;
+}
+@media only screen and (max-width: 768px)
+{
+  .about-section{
+    padding: 85px 0px 60px;
+  }
 }
 
 .title h1 {
