@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
 *{box-sizing: border-box;
 }
 body{
@@ -12,6 +14,23 @@ height:200vh;
 background-color: #E9ECEF;
 
 }
+
+:root{
+  --maincolor:#f9ca24;
+}
+
+html::-webkit-scrollbar{
+  width:1rem;
+}
+
+html::-webkit-scrollbar-track{
+  background:#080708;
+}
+
+html::-webkit-scrollbar-thumb{
+  background:var(--maincolor);
+}
+
 /*-----------------BELOW IS PRELOADER-----------------*/
 
 .preloader{
@@ -126,7 +145,7 @@ body{
   top:0;
   left:0;
   width:103vw;
-  height:100%;
+  height:100vh;
   overflow:hidden;
 }
 .headervdo{
@@ -172,7 +191,7 @@ body{
   background: rgb(213,213,213);
 background: radial-gradient(circle, rgba(213,213,213,1) 16%, rgba(255,201,0,1) 32%, rgba(0,0,0,1) 64%);
  background-size: 200% auto;
-  
+  font-family: 'PT Serif', serif;
   color: #160B1E;
   background-clip: text;
   -webkit-background-clip: text;
@@ -322,4 +341,24 @@ opacity: 0.4;
 .footer{
   background:#080708;
   font-family: 'Josefin Slab', serif;
+}
+
+@media only screen and (max-width: 992px) {
+  .importantlinks{
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+.importantlinks *{
+  font-family: 'Forum', cursive;
+  font-size: small;
+  color:rgba(133, 132, 132, 0.877);
+}
+.importantlinks a{
+  text-decoration:none;
+}
+.importantlinks a:hover{
+  text-decoration: underline;
+  color:rgba(190, 179, 179, 0.877);
+ 
 }

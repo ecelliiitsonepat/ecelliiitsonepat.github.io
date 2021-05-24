@@ -1,0 +1,146 @@
+body {
+  background-color: black;
+}
+:root{
+  --maincolor:#f9ca24;
+}
+
+html::-webkit-scrollbar{
+  width:1rem;
+}
+
+html::-webkit-scrollbar-track{
+  background:#080708;
+}
+
+html::-webkit-scrollbar-thumb{
+  background:var(--maincolor);
+}
+
+.logo{
+  z-index: 5;
+  padding:25px;
+  margin-left:calc(2vh + 5px);
+  background:url("../logo.jpeg");
+  background-repeat: no-repeat;
+  float:top;
+  background-size: cover;
+  box-sizing: border-box;
+  position: fixed;
+  width:calc(50px + 3vw);
+  height:calc(50px + 3vw);
+  top:3%;
+  left:0;
+  transform: translate(-1vw,-2vh);
+  clip-path: circle(50.0% at 50% 50%);
+  cursor: pointer;
+}
+
+.navbar {
+  transform: scale(1.01);
+  background: transparent;
+}
+
+.nav-link {
+  color: white !important;
+  border-radius: 9px;
+}
+
+.navbar-toggler {
+  background: white !important;
+}
+
+.active {
+  background: var(--bs-yellow);
+  color: black !important;
+}
+
+.nav-link:hover, .nav-link:focus, .nav-link:active {
+  background: var(--bs-yellow);
+  color: black !important;
+}
+
+.about-section {
+  padding: 130px 0px 60px;
+}
+@media only screen and (max-width: 768px)
+{
+  .about-section{
+    padding: 85px 0px 60px;
+  }
+}
+
+.title h1 {
+  color: white;
+  font-size: 45px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.title span {
+  color: #AF0808;
+  font-size: 45px;
+  font-weight: 700;
+}
+
+p {
+  color: white;
+  line-height: 1.8;
+  margin: 0 0 15px;
+  padding-bottom: 12px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+img {
+  border-radius: 5%;
+  border: 2px solid white;
+}
+
+.social {
+  padding: 0;
+}
+
+.social li {
+  display: inline-block;
+}
+
+.social li a{
+  list-style: none;
+  margin: 0 4px;
+  padding: 0 6px;
+  font-size: 20px;
+  background-color: #f5f7b2;
+  color: black;
+}
+.social li a:hover{
+  border-radius: 50% ;
+  transition: all 0.5s;
+}
+
+
+.footer{
+  background:#080708;
+  font-family: 'Josefin Slab', serif;
+}
+
+@media only screen and (max-width: 992px) {
+  .importantlinks{
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .navbar-nav{
+    background-color:black;
+}}
+.importantlinks *{
+  font-family: 'Forum', cursive;
+  font-size: small;
+  color:rgba(133, 132, 132, 0.877);
+}
+.importantlinks a{
+  text-decoration:none;
+}
+.importantlinks a:hover{
+  text-decoration: underline;
+  color:rgba(190, 179, 179, 0.877);
+ 
+}
